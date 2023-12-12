@@ -13,8 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
                     {{ __('You are logged in!') }}
+                    <a href="{{ route('companies.index') }}" type="submit" class="btn btn-primary">Companies</a>
+                    <a href="{{ route('employees.index') }}" type="submit" class="btn btn-primary">Employees</a>
                 </div>
             </div>
         </div>
