@@ -12,6 +12,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    <a href="{{ route('home') }}" type="submit" class="btn btn-secondary">Home</a>
                     <a href="{{ route('companies.index') }}" type="submit" class="btn btn-success">Companies List</a>
                     <div class="card mt-3">
                         <div class="card-header">Create Company</div>

@@ -12,6 +12,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    <a href="{{ route('home') }}" type="submit" class="btn btn-secondary">Home</a>
                     <a href="{{ route('companies.index') }}" type="submit" class="btn btn-success">Companies List</a>
                     <div class="card mt-3">
                         <div class="card-header">Edit Company</div>
@@ -48,7 +49,7 @@
                                         <div class="text-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
-                                <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                                <button type="submit" class="btn btn-warning mt-3">Update</button>
                             </form>
                         </div>
                     </div>
