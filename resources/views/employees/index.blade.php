@@ -30,13 +30,17 @@
                                     <tr>
                                         <td>{{ $employee->first_name }}</td>
                                         <td>{{ $employee->last_name }}</td>
-                                        <td>{{ $employee->Company->name }}</td>
+                                        <td>{{ $employee->company->name }}</td>
                                         <td>{{ $employee->email }}</td>
                                         <td>{{ $employee->phone }}</td>
                                         <td>
-                                            <button class="btn btn-info">View</button>
-                                            <button class="btn btn-primary">Edit</button>
-                                            <button class="btn btn-danger">Delete</button>
+                                            <a href="{{ route('employees.show',$employee->id) }}" class="btn btn-info">View</a>
+                                            <a href="{{ route('employees.edit',$employee->id) }}" class="btn btn-primary">Edit</a>
+                                            <form action="{{ route('employees.destroy',$employee->id) }}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger">Delete</button>
+                                            </form>
                                         </td>
                                     </tr>
                                     @endforeach
